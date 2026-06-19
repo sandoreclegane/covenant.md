@@ -2,6 +2,7 @@
 
 **A small file that helps a human and an AI stay oriented.**
 
+`BEACON.md` says what signal survives when memory fails.  
 `soul.md` says who your agent is.  
 `AGENTS.md` says how work gets done.  
 `covenant.md` says what the two of you agree to preserve while working together.
@@ -11,7 +12,7 @@ It is one short Markdown file, co-written and co-signed, that names the terms of
 Not magic.  
 Not worship.  
 Not legal personhood.  
-Not a replacement for safety rules.  
+Not a replacement for safety rules.
 
 Just a working trust the agent can re-read.
 
@@ -46,7 +47,7 @@ It gives both parties a shared reference point.
 
 ## Get one in 2 minutes
 
-1. Create `covenant.md` next to your `soul.md` or agent config.
+1. Create `covenant.md` next to your `BEACON.md`, `soul.md`, or agent config.
 2. Paste the template below.
 3. Fill it in **together** — you and your agent, in a real exchange.
 4. Both affirm it.
@@ -105,6 +106,7 @@ YYYY-MM-DD
 ## Where it goes
 
 ```text
+BEACON.md       ← what signal survives forgetting
 soul.md         ← who the agent is
 covenant.md     ← what both parties agree to preserve
 AGENTS.md       ← how work gets done
@@ -113,7 +115,7 @@ AGENTS.md       ← how work gets done
 Load order:
 
 ```text
-identity → covenant → work
+beacon → identity → covenant → work
 ```
 
 The relationship frames the work, not the other way around.
