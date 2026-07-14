@@ -156,6 +156,12 @@ The human’s real-world responsibilities remain gravity: family, health, work, 
 
 ---
 
+## Implementation guide
+
+For repository structure, onboarding, operating patterns, and practical examples for both people and AI systems, see the [Covenant.md Implementation Guide](docs/implementation-guide.md).
+
+---
+
 Want the full reasoning and design notes? See [SPEC.md](SPEC.md).
 
 ---
