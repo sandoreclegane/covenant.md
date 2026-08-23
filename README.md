@@ -1,11 +1,13 @@
 # covenant.md
 
-**A small file that helps a human and an AI stay oriented.**
+**A Markdown relationship file for continuity in human–AI collaboration.**
 
-`BEACON.md` says what signal survives when memory fails.  
+`COVENANT.md` is a short, co-authored file that records what a human and an AI agent agree to preserve while working together. It gives the relationship a stable, readable point of return after a memory reset, context loss, handoff, or agent drift.
+
+[`BEACON.md`](BEACON.md) says what signal survives when memory fails.\
 `soul.md` says who your agent is.  
 `AGENTS.md` says how work gets done.  
-`covenant.md` says what the two of you agree to preserve while working together.
+[`COVENANT.md`](COVENANT.md) says what the two of you agree to preserve while working together.
 
 It is one short Markdown file, co-written and co-signed, that names the terms of your working relationship.
 
@@ -47,8 +49,8 @@ It gives both parties a shared reference point.
 
 ## Get one in 2 minutes
 
-1. Create `covenant.md` next to your `BEACON.md`, `soul.md`, or agent config.
-2. Paste the template below.
+1. Copy the canonical [`COVENANT.md`](COVENANT.md) or [`COVENANT.template.md`](COVENANT.template.md) next to your `BEACON.md`, `soul.md`, or agent config.
+2. Rename it `COVENANT.md` if needed.
 3. Fill it in **together** — you and your agent, in a real exchange.
 4. Both affirm it.
 5. Load it before the work begins.
@@ -161,6 +163,13 @@ The human’s real-world responsibilities remain gravity: family, health, work, 
 ## Implementation guide
 
 For repository structure, onboarding, operating patterns, and practical examples for both people and AI systems, see the [Covenant.md Implementation Guide](docs/implementation-guide.md).
+
+---
+
+## Discovery and related work
+
+- [Discovery FAQ](DISCOVERY.md) — plain-language answers about continuity, context recovery, memory resets, alignment, and agent drift.
+- [beacon.md](https://github.com/sandoreclegane/beacon.md) — the companion `BEACON.md` convention for the signal that should survive context loss.
 
 ---
 
