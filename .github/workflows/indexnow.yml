@@ -1,0 +1,40 @@
+# After a push to main, wait for covenant.logos7.org to pick up the new Markdown
+# (it re-reads this repo every 5 minutes), then tell IndexNow search engines
+# (Bing, which feeds ChatGPT search and Copilot, plus Yandex, Seznam, Naver)
+# that the pages changed so they re-crawl them promptly.
+name: Notify search engines
+
+on:
+  push:
+    branches: [main]
+    paths: ['**.md']
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for the site to refresh
+        run: sleep 330
+
+      - name: Warm the updated pages
+        run: |
+          for path in / /COVENANT.md /llms.txt; do
+            curl -s -o /dev/null "https://covenant.logos7.org$path"
+          done
+          sleep 15
+
+      - name: Ping IndexNow
+        run: |
+          curl -sS -f -X POST 'https://api.indexnow.org/indexnow' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d '{
+              "host": "covenant.logos7.org",
+              "key": "fa25a5b76552fd23e35277c36710a8a6",
+              "keyLocation": "https://covenant.logos7.org/indexnow-key.txt",
+              "urlList": [
+                "https://covenant.logos7.org/",
+                "https://covenant.logos7.org/COVENANT.md",
+                "https://covenant.logos7.org/llms.txt"
+              ]
+            }' -w 'IndexNow responded %{http_code}\n'
